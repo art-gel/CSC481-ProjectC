@@ -4,11 +4,12 @@ from src.features import add_features
 
 def main():
     dataset = load_dataset()
-    dataset = add_features(dataset)
+    dataset = add_features(dataset) # Add features to the dataset
     print(f"Extracted features for {len(dataset)} images!")
 
     rows = []
-    for entry in dataset:
+    # Convert the dataset into a DataFrame for a readable CSV format
+    for entry in dataset: 
         feats = entry["features"]
         rows.append({
             "file":                 entry["file"],
@@ -22,6 +23,7 @@ def main():
             "aggressive_ratio":     round(feats["aggressive_ratio"], 4),
         })
 
+    # Save the extracted features to a CSV file
     df = pd.DataFrame(rows)
     df.to_csv("extracted_features.csv", index=False)
     print("Saved extracted_features.csv")
