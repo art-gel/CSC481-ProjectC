@@ -1,2 +1,2 @@
-# Classifiers: ANN, Naive Bayes, and SVM
+# Classifiers: ANN, SVM, and Random Forest (Extra Credit)
 # Written by: Amir Pettigrew
