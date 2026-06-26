@@ -19,7 +19,7 @@ X = df[[
 # Select target labels (y)
 y = df["label"]
 
-# Split the dataset into training (90%) and testing (20%) sets
+# Split the dataset into training (80%) and testing (20%) sets
 X_train, X_test, y_train, y_test = train_test_split(
     X,
     y,
@@ -29,8 +29,6 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 # Z-score normalization
 # (value - mean) / standard deviation
-# This ensures that all features are on the same scale, 
-# which is important for many ML algorithms.
 scaler = StandardScaler()
 
 X_train = scaler.fit_transform(X_train)
