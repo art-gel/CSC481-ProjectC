@@ -1,5 +1,5 @@
 # Classifiers: ANN, Naive Bayes, and SVM
-# Written by: Amir Pettigrew
+# Written by: Angel Madeux
 
 from data_preprocess import X_train, X_test, y_train, y_test, target_names
 from sklearn.neural_network import MLPClassifier
